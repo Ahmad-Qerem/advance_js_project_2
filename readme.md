@@ -15,10 +15,10 @@
 ## list completed tasks :
 ![](./demo/7.png)
 
-## sort tasks due to date :
+## sort tasks by date :
 ![](./demo/8.png)
 
-## sort tasks due to priority :
+## sort tasks by priority :
 ![](./demo/9.png)
 
 ## delete task by id :
