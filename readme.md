@@ -15,7 +15,7 @@
 ## list completed tasks :
 ![](./demo/7.png)
 
-## sort tasks dou to date :
+## sort tasks due to date :
 ![](./demo/8.png)
 
 ## sort tasks dou to priority :
