@@ -19,9 +19,6 @@ function Tasks() {
   this.TasksList = [];
 }
 
-Tasks.prototype.printTasks = function () {
-  console.log("hello");
-};
 Tasks.prototype.addTask = function (task) {
   console.log("adding task ...");
   task.id = this.counter++;
@@ -29,13 +26,18 @@ Tasks.prototype.addTask = function (task) {
   console.log("new task added successfully");
 };
 Tasks.prototype.listAllTasks = function () {
-  this.TasksList.map((task) => {
-    console.log("task:", task);
-  });
+  if (this.TasksList.length){
+    this.TasksList.map((task) => {
+      console.log(task);
+    });
+  }else {
+    console.log("there is no tasks !");
+  }
 };
+
 Tasks.prototype.listCompletedTasks = function () {
   this.TasksList.filter((a) => a.completed).map((task) => {
-    console.log("task:", task);
+    console.log(task);
   });
 };
 Tasks.prototype.markTaskDone = function (id) {
@@ -50,10 +52,11 @@ Tasks.prototype.deleteTask = function (id) {
   const index = this.TasksList.findIndex((a) => a.id == id);
   if (index >= 0) {
     this.TasksList.splice(index, 1);
+    console.log(`task # ${id} deleted`);
   } else {
     console.log("task not found");
   }
-  console.log(`task # ${id} deleted`);
+  
 };
 Tasks.prototype.sortByDate = function () {
   this.TasksList.sort(
@@ -154,9 +157,11 @@ const main = async () => {
       case 8:
         tasksList.clearAllTasks();
         break;
-
-      default:
+      case 0:
         x = 0;
+        break;
+      default:
+        console.log("invalid choice ");
         break;
     }
   }
