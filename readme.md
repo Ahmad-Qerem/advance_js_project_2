@@ -18,7 +18,7 @@
 ## sort tasks due to date :
 ![](./demo/8.png)
 
-## sort tasks dou to priority :
+## sort tasks due to priority :
 ![](./demo/9.png)
 
 ## delete task by id :
